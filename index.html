@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Play|Baloo+Bhaina|Dosis" rel="stylesheet">
+       <!-- Bootstrap -->
+      <link href="./css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="./css/style.css">
+   </head>
+   <body>
+   
+               <div ng-app="testApplication" ng-controller="testController">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-xs-6">
+                           <p>Voornaam: <input type="text" ng-model="firstname"/></p>
+                           <p>Tussenvoegsel: <input type="text" ng-model="infix"/></p>
+                           <p>Achternaam: <input type="text" ng-model="lastname"/></p>
+                           <p>{{fullName()}}</p>
+               
+                        </div> <!-- col-xs-6 -->
+                        <div class="col-xs-6">
+                           <table class="table">
+                           <thead>
+                                 <tr>
+                                    <th>id</th>
+                                    <th>Voornaam</th>
+                                    <th>tussenvoegsel</th>
+                                    <th>achternaam</th>
+                                    <th>haarkleur</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr ng-repeat="item in jsonString">
+                                    <td>{{item.id}}</td>
+                                    <td>{{item.firstname}}</td>
+                                    <td>{{item.infix}}</td>
+                                    <td>{{item.lastname}}</td>
+                                    <td>{{item.haircolor}}</td>
+                                 </tr>               
+                              </tbody>
+                           </table>
+                        </div> <!-- col-xs-6 -->         
+                     </div> <!-- class="row" -->
+                  </div> <!--container-->
+               </div><!-- ng-app="testApplication" -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/controller.js"></script>
+   </body>
+</html>
+

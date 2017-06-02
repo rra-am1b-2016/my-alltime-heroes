@@ -1,4 +1,4 @@
-app.controller("testController", function ($scope) {
+app.controller("testController", function ($scope, $http) {
       $scope.firstname = "";
       $scope.infix = "";
       $scope.lastname = "";
@@ -7,8 +7,9 @@ app.controller("testController", function ($scope) {
          return $scope.zin + " " + $scope.firstname + " " + $scope.infix + " " + $scope.lastname;
       };
 
-      $http("data.php").get(function (response) {
-
-      });
+      $http.get("data.php").then(function (response) {
+            $scope.jsonString =  response.data;
+            //console.log($scope.jsonString);
+      })
 
 });
