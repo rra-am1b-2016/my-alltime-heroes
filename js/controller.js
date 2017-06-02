@@ -7,4 +7,8 @@ app.controller("testController", function ($scope) {
          return $scope.zin + " " + $scope.firstname + " " + $scope.infix + " " + $scope.lastname;
       };
 
+      $http("data.php").get(function (response) {
+
+      });
+
 });
