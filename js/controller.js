@@ -10,6 +10,23 @@ app.controller("testController", function ($scope, $http) {
       $http.get("data.php").then(function (response) {
             $scope.jsonString =  response.data;
             //console.log($scope.jsonString);
-      })
+      });
+
+      $scope.createRecord = function () {
+            $http({
+                  url: 'createRecord.php',
+                  method: 'POST',
+                  data: {firstname: $scope.firstname,
+                         infix: $scope.infix,
+                         lastname: $scope.lastname,
+                         haircolor: $scope.haircolor},
+                  headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }).then(function (response) {
+                  
+            },
+            function (response) {
+
+            });                     
+      }
 
 });
