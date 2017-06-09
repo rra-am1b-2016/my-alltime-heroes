@@ -21,9 +21,9 @@
 
    $result = mysqli_query($conn, $query);
 
-   //$records = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-   //$jsonString = json_encode($records, 1);
-
-   //echo $jsonString;
+   if ($result) {
+      echo "Het opslaan is gelukt";
+   } else {
+      echo "Er is een database error! Opslaan is niet gelukt";
+   }
 ?>

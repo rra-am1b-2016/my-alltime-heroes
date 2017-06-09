@@ -22,6 +22,11 @@ app.controller("testController", function ($scope, $http) {
             $scope.readRecords();
       }
 
+      $scope.updateRecord = function (id) {
+            var form = document.getElementById("update");
+            form.style.display = "block";
+      }
+
 
       $scope.readRecords = function () {
              $http.get("data.php").then(function (response) {
@@ -39,7 +44,11 @@ app.controller("testController", function ($scope, $http) {
                          haircolor: $scope.haircolor} ,
                   headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             }).then(function (response) {
-                  
+                  $scope.message = response.data;
+                  document.getElementById("succes").style.display = "block";
+                  setTimeout(function () {
+                        document.getElementById("succes").style.display = "none";                        
+                  }, 3000);
             },
             function (response) {
 

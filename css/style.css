@@ -8,3 +8,9 @@ body {
 .glyphicon-pencil {
   color: #00c8ff;
 }
+.alert {
+  display: none;
+}
+#update {
+  display: none;
+}
