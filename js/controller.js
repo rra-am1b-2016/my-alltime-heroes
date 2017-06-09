@@ -7,13 +7,27 @@ app.controller("testController", function ($scope, $http) {
          return $scope.zin + " " + $scope.firstname + " " + $scope.infix + " " + $scope.lastname;
       };
 
-      
-     
-      $http.get("data.php").then(function (response) {
-      $scope.jsonString =  response.data;
-      });
+      $scope.removeRecord = function (id) {
+            $http({
+                  url: 'removeRecord.php',
+                  method: 'POST',
+                  data: {id: id} ,
+                  headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }).then(function (response){
 
- 
+            }, 
+            function (response) {
+
+            });
+            $scope.readRecords();
+      }
+
+
+      $scope.readRecords = function () {
+             $http.get("data.php").then(function (response) {
+                  $scope.jsonString =  response.data;
+             });
+      }
 
       $scope.createRecord = function () {
             $http({

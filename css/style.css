@@ -2,3 +2,9 @@ body {
   font-family: 'Play', sans-serif;
   background-color: #eafff1;
 }
+.glyphicon-remove {
+  color: #ff5a0a;
+}
+.glyphicon-pencil {
+  color: #00c8ff;
+}
