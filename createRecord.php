@@ -11,13 +11,11 @@
    $query = "INSERT INTO `users` (`id`,
                                   `firstname`,
                                   `infix`, 
-                                  `lastname`, 
-                                  `haircolor`) 
+                                  `lastname`) 
                   VALUES         (NULL, 
                                   '" . $data["firstname"]  ."', 
                                   '" . $data["infix"]  ."', 
-                                  '" . $data["lastname"]  ."', 
-                                  '" . $data["haircolor"]  ."')";
+                                  '" . $data["lastname"]  ."')";
 
    $result = mysqli_query($conn, $query);
 

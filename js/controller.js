@@ -40,8 +40,7 @@ app.controller("testController", function ($scope, $http) {
                   method: 'POST',
                   data: {firstname: $scope.firstname,
                          infix: $scope.infix,
-                         lastname: $scope.lastname,
-                         haircolor: $scope.haircolor} ,
+                         lastname: $scope.lastname} ,
                   headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             }).then(function (response) {
                   $scope.message = response.data;

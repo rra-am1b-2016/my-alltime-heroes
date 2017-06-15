@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Gegenereerd op: 15 jun 2017 om 10:35
+-- Gegenereerd op: 15 jun 2017 om 10:44
 -- Serverversie: 5.6.17
 -- PHP-versie: 5.5.12
 
@@ -33,18 +33,16 @@ CREATE TABLE IF NOT EXISTS `users` (
   `firstname` varchar(100) NOT NULL,
   `infix` varchar(50) NOT NULL,
   `lastname` varchar(200) NOT NULL,
-  `haircolor` enum('yellow','brown','black') NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=57 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=58 ;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `users`
 --
 
-INSERT INTO `users` (`id`, `firstname`, `infix`, `lastname`, `haircolor`) VALUES
-(54, 'sdf', 'sdfklj', 'sdflkj', ''),
-(55, 'Arjan', 'de', 'Ruijter', 'yellow'),
-(56, 'sdf', 'sf', 'sdf', 'yellow');
+INSERT INTO `users` (`id`, `firstname`, `infix`, `lastname`) VALUES
+(54, 'sdf', 'sdfklj', 'sdflkj'),
+(55, 'Arjan', 'de', 'Ruijter');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
