@@ -14,12 +14,12 @@ app.controller("testController", function ($scope, $http) {
                   data: {id: id} ,
                   headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             }).then(function (response){
-
+                  $scope.readRecords();
             }, 
             function (response) {
 
             });
-            $scope.readRecords();
+            
       }
 
       $scope.updateRecord = function (id) {
